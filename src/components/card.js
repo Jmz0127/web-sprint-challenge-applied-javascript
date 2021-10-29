@@ -17,6 +17,45 @@ const Card = (article) => {
   //   </div>
   // </div>
   //
+  const articleObj = {
+    headline: '',
+    authorPhoto: '',
+    authorName: '',
+  }
+  
+
+// instantiating the elements
+const newsCard = document.createElement('div');
+const newsHeadline = document.createElement('div');
+const newsAuthor = document.createElement('div');
+const newsImgContainer = document.createElement('div');
+const newsImgSrc = document.createElement('img');
+const newsAuthorName = document.createElement('span');
+
+
+// create class names, attributes and text
+newsCard.classList.add('card');
+newsHeadline.classList.add('headline');
+newsHeadline.textContent = `${articleObj.headline}`;
+newsAuthor.classList.add('author');
+newsImgContainer.classList.add = ('img-container');
+newsImgSrc.src = `${articleObj.authorPhoto}`;
+newsAuthorName.textContent = `By ${articleObj.authorName}`;
+
+
+// create the hierarchy
+newsCard.appendChild(newsHeadline);
+newsCard.appendChild(newsAuthor);
+newsAuthor.appendChild(newsImgContainer);
+newsImgContainer.appendChild(newsImgSrc);
+newsAuthor.appendChild(newsAuthorName);
+
+
+// return something
+return newsCard;
+
+
+
 }
 
 const cardAppender = (selector) => {
