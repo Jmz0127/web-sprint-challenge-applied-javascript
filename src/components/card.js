@@ -42,11 +42,11 @@ const newsAuthorName = document.createElement('span');
 // create class names, attributes and text
 newsCard.classList.add('card');
 newsHeadline.classList.add('headline');
-newsHeadline.textContent = `${article.headline}`;
+newsHeadline.textContent = `${headline}`;
 newsAuthor.classList.add('author');
-newsImgContainer.classList.add = ('img-container');
-newsImgSrc.src = `${article.authorPhoto}`;
-newsAuthorName.textContent = `By ${article.authorName}`;
+newsImgContainer.classList.add('img-container');
+newsImgSrc.src = `${authorPhoto}`;
+newsAuthorName.textContent = `By ${authorName}`;
 
 
 // create the hierarchy
@@ -60,7 +60,7 @@ newsAuthor.appendChild(newsAuthorName);
 
 // click event
 newsCard.addEventListener('click', () => {
-  console.log(headline);
+  console.log(newsHeadline);
 })
 // return something
 return newsCard;
