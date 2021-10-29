@@ -1,3 +1,5 @@
+// import { container } from "webpack";
+
 const Header = (title, date, temp) => {
   // TASK 1
   // ---------------------
@@ -35,6 +37,8 @@ newsHeader.appendChild(newsTemp);
 return newsHeader;
 }
 
+
+const container = document.querySelector('.header-container')
 const headerAppender = (selector) => {
   // TASK 2
   // ---------------------
@@ -42,6 +46,13 @@ const headerAppender = (selector) => {
   // It should create a header using the Header component above, passing arguments of your choosing.
   // It should append the header to the element in the DOM that matches the given selector.
   //
+return Header(selector)
 }
+Header.forEach(elem => {
+const linkElem = headerAppender(elem);
+container.appendChild(linkElem);
+})
 
+  
+  
 export { Header, headerAppender }
