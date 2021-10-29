@@ -18,10 +18,12 @@ const Card = (article) => {
   // </div>
   //
   const articleObj = {
-    headline: '',
-    authorPhoto: '',
-    authorName: '',
-  }
+    headline:'headline',
+    authorPhoto: 'authorPhoto',
+    authorName: 'authorName'
+  };
+  
+  
   
 
 // instantiating the elements
@@ -51,6 +53,11 @@ newsImgContainer.appendChild(newsImgSrc);
 newsAuthor.appendChild(newsAuthorName);
 
 
+
+// click event
+newsCard.addEventListener('click', () => {
+  console.log(newsHeadline);
+})
 // return something
 return newsCard;
 
