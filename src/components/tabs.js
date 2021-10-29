@@ -16,40 +16,51 @@ const Tabs = (topics) => {
 
 
 // instantiating the elements
-const newsTopics = document.createElement('div');
-const newsTab = document.createElement('div');
+// const newsTopics = document.createElement('div');
+// const newsTab = document.createElement('div');
 
 
 // create class names, attributes and text
-newsTopics.classList.add('topics');
-newsTab.classList.add('tab');
+// newsTopics.classList.add('topics');
+// newsTab.classList.add('tab');
 
 
 
 // create the hierarchy
-newsTopics.appendChild(newsTab);
+// newsTopics.appendChild(newsTab);
 
 
 
 // topic add function
-const mainDiv = document.querySelector('.topics');
-function makeTopics({topic1, topic2, topic3}){
-const topics = document.createElement('.tab');
-topics.topic1 = topic1;
-topics.topic2 = topic2;
-topics.topic3 = topic3;
-return mainDiv;
+
+function createTopic(){
+  const newsTopics = document.createElement('div');
+  newsTopics.classList.add('topics');
+
+ 
+
+  const tTags = [];
+  for(let i = 0; i < 7; i++){
+    tTags.push(document.createElement('div'));
+  }
+
+  tTags[0].textContent = 'javascript';
+  tTags[0].classList.add('tab');
+  tTags[1].textContent = 'bootstrap';
+  tTags[1].classList.add('tab');
+  tTags[2].textContent = 'technology';
+  tTags[2].classList.add('tab');
+
+newsTopics.appendChild('.tab');
+tTags.forEach(div => newsTopics.appendChild(div.div));
+
+
 }
 
-newsTab.forEach(topicObj => {
-  const topicElem = makeTopics(topicObj);
-  mainDiv.appendChild(topicElem);
-  
-})
-
-
 // return something
-return newsTopics;
+return createTopic;
+
+
 }
 
 
