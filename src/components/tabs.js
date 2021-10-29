@@ -13,7 +13,34 @@ const Tabs = (topics) => {
   //   <div class="tab">technology</div>
   // </div>
   //
+
+
+// instantiating the elements
+const newsTopics = document.createElement('div');
+const newsTab1 = document.createElement('div');
+const newsTab2 = document.createElement('div');
+const newsTab3 = document.createElement('div');
+
+// create class names, attributes and text
+newsTopics.classList.add('topics');
+newsTab1.classList.add('tab');
+newsTab2.classList.add('tab');
+newsTab3.classList.add('tab');
+newsTab1.textContent = 'javascript';
+newsTab2.textContent = 'bootstrap';
+newsTab3.textContent = 'technology';
+
+// create the hierarchy
+newsTopics.appendChild(newsTab1);
+newsTopics.appendChild(newsTab2);
+newsTopics.appendChild(newsTab3);
+
+// return something
+return newsTopics;
 }
+
+
+
 
 const tabsAppender = (selector) => {
   // TASK 4
