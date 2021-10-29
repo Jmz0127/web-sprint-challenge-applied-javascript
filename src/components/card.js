@@ -17,11 +17,15 @@ const Card = (article) => {
   //   </div>
   // </div>
   //
-  const articleObj = {
-    headline:'headline',
-    authorPhoto: 'authorPhoto',
-    authorName: 'authorName'
-  };
+
+  // add attributes to the article object
+  
+  article.headline = '';
+  article.authorPhoto = '';
+  article.authorName = '';
+
+ 
+  
   
   
   
@@ -38,11 +42,11 @@ const newsAuthorName = document.createElement('span');
 // create class names, attributes and text
 newsCard.classList.add('card');
 newsHeadline.classList.add('headline');
-newsHeadline.textContent = `${articleObj.headline}`;
+newsHeadline.textContent = `${article.headline}`;
 newsAuthor.classList.add('author');
 newsImgContainer.classList.add = ('img-container');
-newsImgSrc.src = `${articleObj.authorPhoto}`;
-newsAuthorName.textContent = `By ${articleObj.authorName}`;
+newsImgSrc.src = `${article.authorPhoto}`;
+newsAuthorName.textContent = `By ${article.authorName}`;
 
 
 // create the hierarchy
