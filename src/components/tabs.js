@@ -17,27 +17,41 @@ const Tabs = (topics) => {
 
 // instantiating the elements
 const newsTopics = document.createElement('div');
-const newsTab1 = document.createElement('div');
-const newsTab2 = document.createElement('div');
-const newsTab3 = document.createElement('div');
+const newsTab = document.createElement('div');
+
 
 // create class names, attributes and text
 newsTopics.classList.add('topics');
-newsTab1.classList.add('tab');
-newsTab2.classList.add('tab');
-newsTab3.classList.add('tab');
-newsTab1.textContent = 'javascript';
-newsTab2.textContent = 'bootstrap';
-newsTab3.textContent = 'technology';
+newsTab.classList.add('tab');
+
+
 
 // create the hierarchy
-newsTopics.appendChild(newsTab1);
-newsTopics.appendChild(newsTab2);
-newsTopics.appendChild(newsTab3);
+newsTopics.appendChild(newsTab);
+
+
+
+// topic add function
+const mainDiv = document.querySelector('.topics');
+function makeTopics({topic1, topic2, topic3}){
+const topics = document.createElement('.tab');
+topics.topic1 = topic1;
+topics.topic2 = topic2;
+topics.topic3 = topic3;
+return mainDiv;
+}
+
+newsTab.forEach(topicObj => {
+  const topicElem = makeTopics(topicObj);
+  mainDiv.appendChild(topicElem);
+  
+})
+
 
 // return something
 return newsTopics;
 }
+
 
 
 

@@ -20,11 +20,11 @@ const Card = (article) => {
 
   // add attributes to the article object
   
-  article.headline = '';
-  article.authorPhoto = '';
-  article.authorName = '';
+  const headline = article.headline;
+  const authorPhoto = article.authorPhoto;
+  const authorName = article.authorName;
 
- 
+
   
   
   
@@ -60,7 +60,7 @@ newsAuthor.appendChild(newsAuthorName);
 
 // click event
 newsCard.addEventListener('click', () => {
-  console.log(newsHeadline);
+  console.log(headline);
 })
 // return something
 return newsCard;
